@@ -2682,14 +2682,16 @@ input, select, textarea {
 .image.main {
     display: block;
     margin: 0 0 3rem 0;
-    width: 100%;
-    overflow: hidden; /* Ensures no content overflow */
+    width: 100%; /* Ensures the container spans the full width */
+    height: auto; /* Let the container height adjust naturally */
+    overflow: visible; /* Allow the image to fully display */
 }
 
 .image.main img {
-    width: 100%; /* Scale to fit the container width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure full visibility */
+    width: 100%; /* Make the image span the container width */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
+    display: block; /* Eliminate extra space below the image */
 }
 
 /* List */
