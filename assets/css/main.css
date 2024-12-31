@@ -2887,6 +2887,30 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 480px) {
+			/* Existing styles for ul.actions are fine here */
+		
+			/* Ensure the hero image scales properly */
+			.image.main img {
+				width: 100%; /* Fit container width */
+				height: auto; /* Maintain aspect ratio */
+				object-fit: contain; /* Ensure no cropping */
+			}
+		}
+		
+		@media screen and (min-width: 481px) {
+			/* For larger screens, ensure the image behaves the same */
+			.image.main img {
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+			}
+		
+			.banner {
+				height: auto; /* Let the content define the height */
+			}
+		}		
+
 /* Icons */
 
 	ul.icons {
