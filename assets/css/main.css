@@ -2627,58 +2627,70 @@ input, select, textarea {
 
 /* Image */
 
-	.image {
-		border: 0;
-		border-radius: 4px;
-		display: inline-block;
-		position: relative;
-	}
+.image {
+    border: 0;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden; /* Ensures no content overflow */
+}
 
-		.image img {
-			display: block;
-			border-radius: 4px;
-		}
+.image img {
+    display: block;
+    border-radius: 4px;
+    width: 100%; /* Scale to fit the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the entire image is visible */
+}
 
-		.image.left, .image.right {
-			width: 40%;
-			max-width: 10rem;
-		}
+.image.left, .image.right {
+    width: 40%;
+    max-width: 10rem;
+}
 
-			.image.left img, .image.right img {
-				width: 100%;
-			}
+.image.left img, .image.right img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Prevent cropping */
+}
 
-		.image.left {
-			float: left;
-			margin: 0 1.5rem 1rem 0;
-			top: 0.25rem;
-		}
+.image.left {
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    top: 0.25rem;
+}
 
-		.image.right {
-			float: right;
-			margin: 0 0 1rem 1.5rem;
-			top: 0.25rem;
-		}
+.image.right {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    top: 0.25rem;
+}
 
-		.image.fit {
-			display: block;
-			margin: 0 0 2rem 0;
-			width: 100%;
-		}
+.image.fit {
+    display: block;
+    margin: 0 0 2rem 0;
+    width: 100%;
+    overflow: hidden; /* Prevents content overflow */
+}
 
-			.image.fit img {
-				width: 100%;
-			}
+.image.fit img {
+    width: 100%; /* Fit container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure full visibility */
+}
 
-		.image.main {
-			display: block;
-			margin: 0 0 3rem 0;
-			width: 100%;
-		}
+.image.main {
+    display: block;
+    margin: 0 0 3rem 0;
+    width: 100%;
+    overflow: hidden; /* Ensures no content overflow */
+}
 
-			.image.main img {
-				width: 100%;
-			}
+.image.main img {
+    width: 100%; /* Scale to fit the container width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure full visibility */
+}
 
 /* List */
 
@@ -8601,7 +8613,7 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
-						
+
 /* Menu Styles */
 #menu {
     background-color: #333; /* Background color */
