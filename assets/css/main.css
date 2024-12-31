@@ -8601,3 +8601,29 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+/* Menu Styles */
+#menu {
+    background-color: #333; /* Background color */
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+#menu a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+#menu a:hover {
+    background-color: #575757;
+    color: white;
+}
+#menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
