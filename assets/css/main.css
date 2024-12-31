@@ -2674,8 +2674,8 @@ input, select, textarea {
 }
 
 .image.fit img {
-    width: auto; /* Fit container width */
-    height: 100%; /* Maintain aspect ratio */
+    width: 100%; /* Fit container width */
+    height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensure full visibility */
 }
 
