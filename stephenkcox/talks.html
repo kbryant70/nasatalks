@@ -16,7 +16,7 @@
 
 		<!-- Menu -->
 			<div id="menu-container"></div>
-			
+
 		<!-- Wrapper -->
 			<div id="wrapper" class="divided">
 
@@ -77,6 +77,18 @@
 		<script src="../assets/js/breakpoints.min.js"></script>
 		<script src="../assets/js/util.js"></script>
 		<script src="../assets/js/main.js"></script>
+		<script>
+			// Load the menu dynamically
+			document.getElementById('menu-container').innerHTML = `
+				<!-- Use Fetch API to load the menu.html -->
+				<div id="menu-placeholder"></div>
+			`;
+			fetch('menu.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('menu-placeholder').innerHTML = data;
+				});
+		</script>
 
 	</body>
 </html>
