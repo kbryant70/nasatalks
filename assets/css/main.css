@@ -2674,9 +2674,10 @@ input, select, textarea {
 }
 
 .image.fit img {
-    width: 100%; /* Fit container width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure full visibility */
+    height: auto !important; /* Maintain aspect ratio */
+    max-width: 100% !important; /* Prevent the image from exceeding the section's width */
+    max-height: 100% !important; /* Prevent the image from exceeding the section's height */
+    object-fit: contain; /* Ensure the entire image is visible */
 }
 
 .image.main {
@@ -2690,8 +2691,6 @@ input, select, textarea {
 .image.main img {
     width: 100% !important;/* Scale proportionally */
     height: auto !important; /* Maintain aspect ratio */
-    max-width: 100% !important; /* Prevent the image from exceeding the section's width */
-    max-height: 100% !important; /* Prevent the image from exceeding the section's height */
     object-fit: contain; /* Ensure the entire image is visible */
 }
 
