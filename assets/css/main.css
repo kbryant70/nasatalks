@@ -2688,9 +2688,11 @@ input, select, textarea {
 }
 
 .image.main img {
-    width: 100% !important; /* Force the image to take the container's width */
+    width: auto !important;/* Scale proportionally */
     height: auto !important; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure no cropping */
+    max-width: 100% !important; /* Prevent the image from exceeding the section's width */
+    max-height: 100% !important; /* Prevent the image from exceeding the section's height */
+    object-fit: contain; /* Ensure the entire image is visible */
 }
 
 /* List */
