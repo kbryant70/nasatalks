@@ -7033,6 +7033,21 @@ input, select, textarea {
 
 /* Gallery (lightbox) */
 
+.gallery .image img {
+    width: 150px; /* Set the desired thumbnail width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    display: block;
+    margin: 0 auto; /* Center the image */
+    transition: transform 0.2s ease; /* Optional: Add hover effect */
+}
+
+.gallery .image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
 	@-moz-keyframes gallery-modal-spinner {
 		0% {
 			-moz-transform: rotate(0deg);
