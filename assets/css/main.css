@@ -2688,7 +2688,7 @@ input, select, textarea {
 }
 
 .image.main img {
-    width: auto !important;/* Scale proportionally */
+    width: 100% !important;/* Scale proportionally */
     height: auto !important; /* Maintain aspect ratio */
     max-width: 100% !important; /* Prevent the image from exceeding the section's width */
     max-height: 100% !important; /* Prevent the image from exceeding the section's height */
